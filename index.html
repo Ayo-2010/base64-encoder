@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Base64 Encoder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="head">
+  <div class="stamp">B64</div>
+  <div>
+    <h1>Base64 Encoder</h1>
+    <p class="sub">Encode and decode text with full Unicode support. Two panels, one arrow, no surprises.</p>
+  </div>
+</header>
+
+<main class="sheet">
+  <section class="panel">
+    <div class="panel-top">
+      <h2 id="inLabel">Plain text</h2>
+      <span class="tag" id="sizes">0 bytes in &#183; 0 bytes out</span>
+    </div>
+    <textarea id="input" spellcheck="false" placeholder="Type or paste text here&hellip;"></textarea>
+  </section>
+
+  <div class="arrow" aria-hidden="true">
+    <svg viewBox="0 0 40 24" width="40" height="24" role="img" focusable="false">
+      <path d="M2 12h30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <path d="M27 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+
+  <section class="panel">
+    <div class="panel-top">
+      <h2 id="outLabel">Base64</h2>
+      <label class="switch">
+        <input type="checkbox" id="urlSafe">
+        <span class="track" aria-hidden="true"></span>
+        <span class="switch-text">URL-safe</span>
+      </label>
+    </div>
+    <textarea id="output" spellcheck="false" placeholder="Result appears here&hellip;"></textarea>
+  </section>
+
+  <div class="controls">
+    <button id="encodeBtn" class="btn btn-primary" type="button">Encode &#8594;</button>
+    <button id="decodeBtn" class="btn" type="button">&#8592; Decode</button>
+    <button id="swapBtn" class="btn" type="button">Swap</button>
+    <button id="copyBtn" class="btn" type="button">Copy output</button>
+    <button id="clearBtn" class="btn btn-quiet" type="button">Clear</button>
+  </div>
+
+  <p class="error" id="error" role="alert"></p>
+  <p class="hint">Shortcut: <kbd>Ctrl</kbd> + <kbd>Enter</kbd> runs the last direction you used. Conversion also happens live as you type.</p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
